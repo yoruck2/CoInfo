@@ -11,7 +11,7 @@ import SwiftUI
 struct CoInfoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoInfoTabView()
         }
     }
 }
