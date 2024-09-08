@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+extension Double {
+    
+    func formatToKRW() -> String {
+        return "₩\(self.formatted())"
+    }
+    
+    func formatToPercent() -> String {
+        return String(format: "%.2f%%", self)
+    }
+}
