@@ -13,5 +13,6 @@ struct Search: Decodable {
         let name: String
         let symbol: String
         let thumb: String
+        let large: String
     }
 }
