@@ -11,7 +11,7 @@ enum APIEndPoint: APIConfigurable {
     
     case trending
     case search(query: String)
-    case market(currency: String?, ids: String?, sparkline: Bool?)
+    case market(currency: String?, ids: String?, sparkline: Bool)
     
     var method: String { "GET" }
     var headers: [String: String]? { ["Content-Type": "application/json"] }
@@ -42,7 +42,7 @@ enum APIEndPoint: APIConfigurable {
         case .market(currency: let currency, ids: let ids, sparkline: let sparkline):
             return [URLQueryItem(name: "vs_currency", value: currency),
                     URLQueryItem(name: "ids", value: ids),
-                    URLQueryItem(name: "sparkline", value: "\(String(describing: sparkline))")]
+                    URLQueryItem(name: "sparkline", value: "\(sparkline)")]
         }
     }
 }
