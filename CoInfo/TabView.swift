@@ -7,12 +7,32 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct CoInfoTabView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            TrendingView()
+                .tabItem {
+                    Image(systemName: "chart.line.uptrend.xyaxis")
+                }
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                }
+            FavoriteCoinView()
+                .tabItem {
+                    Image(systemName: "star")
+                }
+            FavoriteCoinView()
+                .tabItem {
+                    Image(systemName: "person")
+                }
+        }
+        .accentColor(.purple)
     }
+    
 }
 
 #Preview {
-    TabView()
+    CoInfoTabView()
 }
